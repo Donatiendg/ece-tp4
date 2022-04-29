@@ -59,6 +59,21 @@ Style pour les pièces blanches.
 /**
 Style pour le plateau.
 */
+#grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+}
+
+#grid div:nth-child(2n){
+    background-color: black;
+}
+
+#grid div:nth-child(2n + 1){
+    background-color: white;
+}
+
 .case {
     
 }
