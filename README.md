@@ -3,9 +3,9 @@
 | Binôme  | Valeurs |
 | ------------- |:-------------:|
 | N°     | XX     |
-| Membres      | XX     |
+| Membres      | Donatien Thiroux De Gervillier - Thomas Moura |
 
-Github : 
+Github : https://github.com/Donatiendg/TP_note.git
 
 Dernière question traitée : 
 

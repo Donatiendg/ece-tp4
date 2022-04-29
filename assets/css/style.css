@@ -3,21 +3,27 @@ Style pour les pièces noires.
 */
 
 .pion-noir {
+    background-image: url(../image/noir-pion.gif);
 }
 
 .tour-noir {
+    background-image: url(../image/noir-tour.gif);
 }
 
 .cavalier-noir {
+    background-image: url(../image/noir-cavalier.gif);
 }
 
 .fou-noir {
+    background-image: url(../image/noir-fou.gif);
 }
 
 .roi-noir {
+    background-image: url(../image/noir-roi.gif);
 }
 
 .reine-noir {
+    background-image: url(../image/noir-reine.gif);
 }
 
 
@@ -26,21 +32,27 @@ Style pour les pièces blanches.
 */
 
 .pion-blanc {
+    background-image: url(../image/blanc-pion.gif);
 }
 
 .tour-blanc {
+    background-image: url(../image/blanc-tour.gif);
 }
 
 .cavalier-blanc {
+    background-image: url(../image/blanc-cavalier.gif);
 }
 
 .fou-blanc {
+    background-image: url(../image/blanc-fou.gif);
 }
 
 .roi-blanc {
+    background-image: url(../image/blanc-roi.gif);
 }
 
 .reine-blanc {
+    background-image: url(../image/blanc-reine.gif);
 }
 
 
@@ -48,4 +60,5 @@ Style pour les pièces blanches.
 Style pour le plateau.
 */
 .case {
+    
 }
