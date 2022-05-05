@@ -24,7 +24,6 @@ Style pour les pièces noires.
 
 .reine-noir {
     background-image: url(../image/noir-reine.gif);
-    
 }
 
 
@@ -88,4 +87,8 @@ Style pour le plateau.
 #grid div:nth-child(48) ~ div:nth-child(-2n+57),
 #grid div:nth-child(56) ~ div:nth-child(-2n+64){
     background-color: brown;
+}
+
+.case{
+
 }

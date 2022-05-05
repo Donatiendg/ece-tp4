@@ -77,6 +77,7 @@ var play = function() {
         currentSelection = true;
         var classPiece = getCaseClass(selectedHTMLClasses);
         addSelectedClassByPlayer(this.classList);
+        console.log("??")
     } else {
 
 
@@ -84,9 +85,12 @@ var play = function() {
 };
 
 /**
- * On lie tous les éléments avec la classe 'case' à l'événement 'click'.
+ * On lie tous les éléments avec la class 'case' à l'événement 'click'.
  */
 var elements = document.getElementsByClassName("case");
+console.log(elements)
+console.log(elements.length)
 for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', play, false);
+    document.createTextNode("test")
 }
