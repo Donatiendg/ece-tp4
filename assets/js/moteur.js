@@ -79,6 +79,7 @@ var play = function() {
         addSelectedClassByPlayer(this.classList);
     } else {
 
+
     }
 };
 
