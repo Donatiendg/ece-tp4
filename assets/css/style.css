@@ -64,16 +64,28 @@ Style pour le plateau.
     width: 100%;
     grid-template-columns: repeat(8, 60px);
     grid-template-rows: repeat(8, 60px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#grid div:nth-child(2n){
+#grid div:nth-child(-2n+8),
+#grid div:nth-child(8) ~ div:nth-child(-2n+15),
+#grid div:nth-child(16) ~ div:nth-child(-2n+24),
+#grid div:nth-child(24) ~ div:nth-child(-2n+31),
+#grid div:nth-child(32) ~ div:nth-child(-2n+40),
+#grid div:nth-child(40) ~ div:nth-child(-2n+47),
+#grid div:nth-child(48) ~ div:nth-child(-2n+56),
+#grid div:nth-child(56) ~ div:nth-child(-2n+63){
     background-color: black;
 }
 
-#grid div:nth-child(2n + 1){
-    background-color: white;
-}
-
-.case {
-    
+#grid div:nth-child(-2n+9),
+#grid div:nth-child(9) ~ div:nth-child(-2n+16),
+#grid div:nth-child(16) ~ div:nth-child(-2n+23),
+#grid div:nth-child(25) ~ div:nth-child(-2n+32),
+#grid div:nth-child(32) ~ div:nth-child(-2n+39),
+#grid div:nth-child(40) ~ div:nth-child(-2n+48),
+#grid div:nth-child(48) ~ div:nth-child(-2n+57),
+#grid div:nth-child(56) ~ div:nth-child(-2n+64){
+    background-color: brown;
 }
