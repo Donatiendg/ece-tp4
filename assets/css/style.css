@@ -64,8 +64,7 @@ Style pour le plateau.
     width: 100%;
     grid-template-columns: repeat(8, 60px);
     grid-template-rows: repeat(8, 60px);
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
 }
 
 #grid div:nth-child(-2n+8),
