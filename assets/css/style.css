@@ -75,7 +75,7 @@ Style pour le plateau.
 #grid div:nth-child(40) ~ div:nth-child(-2n+47),
 #grid div:nth-child(48) ~ div:nth-child(-2n+56),
 #grid div:nth-child(56) ~ div:nth-child(-2n+63){
-    background-color: black;
+    background-color: #9E9E9E;
 }
 
 #grid div:nth-child(-2n+9),
@@ -86,9 +86,16 @@ Style pour le plateau.
 #grid div:nth-child(40) ~ div:nth-child(-2n+48),
 #grid div:nth-child(48) ~ div:nth-child(-2n+57),
 #grid div:nth-child(56) ~ div:nth-child(-2n+64){
-    /*background-color: brown;*/
+    background-color: #C0C0C0;
 }
 
 .case{
     background-size: cover;
+}
+
+.selectedRed{
+    border: red solid 2px;
+}
+.selectedBlue{
+    border: blue solid 2px;
 }
