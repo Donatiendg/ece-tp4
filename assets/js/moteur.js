@@ -70,18 +70,14 @@ function removeSelectedClassByPlayer(classList) {
  * A MODIFIER
  */
 let play = function() {
-    //console.log(currentPlayer);
     if (!currentSelection) {
         selectedHTML = this;
         selectedHTMLClasses = this.className;
         let piece = getCaseClass(selectedHTMLClasses);
-        //console.log(isCaseEmpty(piece));
-        //console.log(isCaseAllowed(piece));
         if (isCaseEmpty(piece) && isCaseAllowed(piece)){
             currentSelection = true;
             addSelectedClassByPlayer(this.classList);
         }
-        //var classPiece = getCaseClass(selectedHTMLClasses);
     } else {
         let piece = getCaseClass(this.className);
         removeSelectedClassByPlayer(selectedHTML.classList);
@@ -95,7 +91,6 @@ let play = function() {
             selectedHTML = null;
             selectedHTMLClasses = null;
             currentSelection = false;
-            isWin();
             changePlayer();
         }
         else {//Poser sur un pion adverse
@@ -105,10 +100,10 @@ let play = function() {
             selectedHTML = null;
             selectedHTMLClasses = null;
             currentSelection = false;
-            isWin();
             changePlayer();
         }
     }
+    isWin();
 };
 
 function getElementsChildren(selectedClasses){
@@ -130,14 +125,25 @@ function isCaseAllowed(selectedClasses){
 
 function isWin(){
     let grid = document.getElementsByClassName("case");
-    let count = 0;
+    let countPlayer1 = 0;
+    let countPlayer2 = 0;
+    console.log(grid)
     for (let i = 0; i < grid.length; i++) {
+        if (getCaseClass(grid[i].className) === "roi-noir"){
+            break;
+        }
+        if (getCaseClass(grid[i].className) === "roi-blanc"){
+            break;
+        }
         if (arrayPlayer1Pieces.includes(getCaseClass(grid[i].className))){
-            count ++;
+            countPlayer1 ++;
+        }
+        else if (arrayPlayer2Pieces.includes(getCaseClass(grid[i].className))){
+            countPlayer2 ++;
         }
     }
-    console.log(count);
-    console.log(arrayPlayer1Pieces.includes(getCaseClass(grid[0].className)));
+    console.log(countPlayer1);
+    console.log(countPlayer2);
 }
 
 let arrayPlayer1Pieces = ["tour-noir", "cavalier-noir", "fou-noir", "roi-noir", "reine-noir", "pion-noir"];
@@ -145,44 +151,44 @@ let arrayPlayer2Pieces = ["tour-blanc", "cavalier-blanc", "fou-blanc", "roi-blan
 /**
  * On lie tous les éléments avec la class 'case' à l'événement 'click'.
  */
-var elements = document.getElementsByClassName("case");
-for (let i = 0; i < elements.length; i++) {
-    elements[i].addEventListener('click', play, false);
+let GridElements = document.getElementsByClassName("case");
+for (let i = 0; i < GridElements.length; i++) {
+    GridElements[i].addEventListener('click', play, false);
     document.createTextNode("test");
     if (i === 0 || i === 7){
-        elements[i].classList.add("tour-noir");
+        GridElements[i].classList.add("tour-noir");
     }
     else if (i === 1 || i === 6){
-        elements[i].classList.add("cavalier-noir");
+        GridElements[i].classList.add("cavalier-noir");
     }
     else if (i === 2 || i === 5){
-        elements[i].classList.add("fou-noir");
+        GridElements[i].classList.add("fou-noir");
     }
     else if (i === 4){
-        elements[i].classList.add("roi-noir");
+        GridElements[i].classList.add("roi-noir");
     }
     else if (i === 3){
-        elements[i].classList.add("reine-noir");
+        GridElements[i].classList.add("reine-noir");
     }
     else if (i > 6 && i < 16){
-        elements[i].classList.add("pion-noir");
+        GridElements[i].classList.add("pion-noir");
     }
     if (i === 48 || i === 55){
-        elements[i].classList.add("tour-blanc");
+        GridElements[i].classList.add("tour-blanc");
     }
     else if (i === 49 || i === 54){
-        elements[i].classList.add("cavalier-blanc");
+        GridElements[i].classList.add("cavalier-blanc");
     }
     else if (i === 50 || i === 53){
-        elements[i].classList.add("fou-blanc");
+        GridElements[i].classList.add("fou-blanc");
     }
     else if (i === 51){
-        elements[i].classList.add("reine-blanc");
+        GridElements[i].classList.add("reine-blanc");
     }
     else if (i === 52){
-        elements[i].classList.add("roi-blanc");
+        GridElements[i].classList.add("roi-blanc");
     }
     else if (i > 39 && i < 48){
-        elements[i].classList.add("pion-blanc");
+        GridElements[i].classList.add("pion-blanc");
     }
 }
