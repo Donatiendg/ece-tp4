@@ -233,3 +233,11 @@ function Initialisation(){
        
         Initialisation();
     }
+
+    function reloadScore(){
+        scorePlayer1 = 0 ;
+        document.getElementById("scoreNoir").innerHTML = scorePlayer1;
+        
+        scorePlayer2 = 0;
+        document.getElementById("scoreBlanc").innerHTML = scorePlayer2;
+    }
