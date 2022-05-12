@@ -195,24 +195,25 @@ function Initialisation(){
         else if (i > 6 && i < 16){
             GridElements[i].classList.add("pion-noir");
         }
-        if (i === 48 || i === 55){
+        else if (i === 56 || i === 63){
             GridElements[i].classList.add("tour-blanc");
         }
-        else if (i === 49 || i === 54){
+        else if (i === 57 || i === 62){
             GridElements[i].classList.add("cavalier-blanc");
         }
-        else if (i === 50 || i === 53){
+        else if (i === 58 || i === 61){
             GridElements[i].classList.add("fou-blanc");
         }
-        else if (i === 51){
+        else if (i === 59){
             GridElements[i].classList.add("reine-blanc");
         }
-        else if (i === 52){
+        else if (i === 60){
             GridElements[i].classList.add("roi-blanc");
         }
-        else if (i > 39 && i < 48){
+        else if (i > 47 && i < 56){
             GridElements[i].classList.add("pion-blanc");
         }
+
     }
 }
 

@@ -66,31 +66,29 @@ Style pour le plateau.
     justify-content: center;
 
     margin: 0 auto;
-    padding-top: 20px; 
-    border: green;
-    border-width: 5px;
-    border-style: groove;
+    padding-top: 20px;
+    border: 5px groove green;
 }
 
-#grid div:nth-child(-2n+8),
-#grid div:nth-child(8) ~ div:nth-child(-2n+15),
-#grid div:nth-child(16) ~ div:nth-child(-2n+24),
-#grid div:nth-child(24) ~ div:nth-child(-2n+31),
-#grid div:nth-child(32) ~ div:nth-child(-2n+40),
-#grid div:nth-child(40) ~ div:nth-child(-2n+47),
-#grid div:nth-child(48) ~ div:nth-child(-2n+56),
-#grid div:nth-child(56) ~ div:nth-child(-2n+63){
+#grid div:nth-child(even),
+#grid div:nth-child(9) ~ div:nth-child(odd),
+#grid div:nth-child(16) ~ div:nth-child(even),
+#grid div:nth-child(24) ~ div:nth-child(odd),
+#grid div:nth-child(32) ~ div:nth-child(even),
+#grid div:nth-child(40) ~ div:nth-child(odd),
+#grid div:nth-child(48) ~ div:nth-child(even),
+#grid div:nth-child(56) ~ div:nth-child(odd){
     background-color: #9E9E9E;
 }
 
-#grid div:nth-child(-2n+9),
+#grid div:nth-child(odd),
 #grid div:nth-child(9) ~ div:nth-child(-2n+16),
-#grid div:nth-child(16) ~ div:nth-child(-2n+23),
+#grid div:nth-child(17) ~ div:nth-child(-2n+25),
 #grid div:nth-child(25) ~ div:nth-child(-2n+32),
-#grid div:nth-child(32) ~ div:nth-child(-2n+39),
-#grid div:nth-child(40) ~ div:nth-child(-2n+48),
-#grid div:nth-child(48) ~ div:nth-child(-2n+57),
-#grid div:nth-child(56) ~ div:nth-child(-2n+64){
+#grid div:nth-child(33) ~ div:nth-child(-2n+41),
+#grid div:nth-child(41) ~ div:nth-child(-2n+48),
+#grid div:nth-child(49) ~ div:nth-child(-2n+57),
+#grid div:nth-child(57) ~ div:nth-child(-2n+64){
     background-color: #C0C0C0;
 }
 
@@ -108,9 +106,7 @@ Style pour le plateau.
 aside{
     margin: 5px;
     float: right;
-    border: red;
-    border-width: 5px;
-    border-style: groove;
+    border: 5px groove red;
     width: 450px;
     height: 490px;
     font-size: 40px;
@@ -122,9 +118,7 @@ nav{
     width: 450px;
     height: 490px;
     float: left;
-    border: blue;
-    border-width: 5px;
-    border-style: groove;
+    border: 5px groove blue;
     font-size: 40px;
     text-align: center;
 }
