@@ -61,10 +61,15 @@ Style pour le plateau.
 */
 #grid {
     display: grid;
-    width: 100%;
     grid-template-columns: repeat(8, 60px);
     grid-template-rows: repeat(8, 60px);
     justify-content: center;
+
+    margin: 0 auto;
+    padding-top: 20px; 
+    border: green;
+    border-width: 5px;
+    border-style: groove;
 }
 
 #grid div:nth-child(-2n+8),
@@ -98,4 +103,39 @@ Style pour le plateau.
 }
 .selectedBlue{
     border: blue solid 2px;
+}
+
+aside{
+    margin: 5px;
+    float: right;
+    border: red;
+    border-width: 5px;
+    border-style: groove;
+    width: 450px;
+    height: 490px;
+    font-size: 40px;
+    text-align: center;
+}
+
+nav{
+    margin: 5px;
+    width: 450px;
+    height: 490px;
+    float: left;
+    border: blue;
+    border-width: 5px;
+    border-style: groove;
+    font-size: 40px;
+    text-align: center;
+}
+
+footer{
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+header{
+    padding: 20px;
 }

@@ -8,11 +8,17 @@
     </head>
 
     <body>
-        <div>
-            <section>
-                <header>
-                    <h1>TP noté - CHESS - HTML&CSS&JS</h1>
-                </header>
+        <header>
+            <h1>TP noté - CHESS - HTML&CSS&JS</h1>
+        </header>
+        <nav>
+            
+            Score Noir : <br><span id="scoreNoir">0</span>
+        </nav>
+        <aside>
+            Score Blanc :  <br><span id="scoreBlanc">0</span>
+        </aside> 
+            <section>     
                 <article>
                     <div id="grid">
                         <div id="11" class="case">11</div>
@@ -72,10 +78,13 @@
                         <div id="77" class="case">27</div>
                         <div id="78" class="case">27</div>
                     </div>
-                <!-- Faire le plateau ici -->
                 </article>
             </section>
-        </div>
+            <footer>
+                <div>
+                    <button id="reset" onclick="reloadGame()">Nouvelle Partie</button>
+                </div>
+            </footer>
     </body>
 </html>
 <script src="assets/js/moteur.js"></script>
